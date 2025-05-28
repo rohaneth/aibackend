@@ -9,7 +9,7 @@ import cors from "cors";
 
 const genAI = new GoogleGenerativeAI("AIzaSyA4mqhBPvprr9BxedtpUbbMmM74NkqL_yE");
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "https://ai-dev-coral.vercel.app/" }));
 app.use(express.json());
 
 app.post("/template", async (req, res) => {
